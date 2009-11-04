@@ -1,0 +1,6 @@
+Compilation
+-----------
+
+$ cd amee/src
+$ qmake
+$ make
