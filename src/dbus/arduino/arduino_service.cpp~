@@ -1,0 +1,14 @@
+#include <QDebug>
+
+#include "arduino_service.h"
+
+arduino_service::arduino_service()
+{
+
+}
+
+QString arduino_service::name()
+{
+  return ARDUINO_SERVICE_NAME;
+}
+

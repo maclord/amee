@@ -1,0 +1,17 @@
+#ifndef ARDUINO_SERVICE_H
+#define ARDUINO_SERVICE_H
+
+#include "../dbus_device_service.h"
+
+#define ARDUINO_SERVICE_NAME "Arduino service"
+
+class arduino_service: public dbus_device_service
+{
+      
+ public:
+  arduino_service();
+  QString name();
+
+};
+
+#endif

@@ -1,0 +1,9 @@
+#include <QDebug>
+
+#include "webcam_service.h"
+
+QString webcam_service::name()
+{
+  return WEBCAM_SERVICE_NAME;
+}
+
