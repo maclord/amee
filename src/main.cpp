@@ -1,5 +1,5 @@
 #include <QDebug>
-#include <QtCore/QCoreApplication>
+#include <QCoreApplication>
 
 #include "dbus/dbus_devices_manager.h"
 
