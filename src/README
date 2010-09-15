@@ -1,0 +1,9 @@
+# Compiling
+Run :
+  - qmake
+  - make
+
+# Compiling using a OpenWRT environnement
+Run :
+  - eval qmake $(./set_qmake_variables.sh /path/to/OpenWRT/directory)
+  - make
