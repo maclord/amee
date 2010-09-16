@@ -14,3 +14,12 @@ Run :
   $ cd src
   $ eval qmake $(./set_qmake_variables.sh /path/to/OpenWRT/directory)
   $ make
+
+
+ Using the provided OpenWRT configuration
+------------------------------------------
+
+The configuration for OpenWRT and for the kernel is located in the OpenWRT_configuration directory.
+To use the provided OpenWRT configuration, copy the file "openwrt-config" at the root of your OpenWRT environment under ".config".
+To use the provided kernel configuration, copy the file "kernel-config" in your OpenWRT environment under TODO.
+
