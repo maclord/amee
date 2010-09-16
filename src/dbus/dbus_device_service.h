@@ -14,7 +14,7 @@ class dbus_device_service: public QObject
  public:
   dbus_device_service();
   virtual void start();
-  virtual void initialize();
+  virtual bool initialize();
   virtual QString name() = 0;
   virtual QString service_name();
   //  virtual void register_instance() = 0;

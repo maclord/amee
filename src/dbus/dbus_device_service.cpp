@@ -18,9 +18,10 @@ QString dbus_device_service::service_name()
   return DBUS_SERVICE_PREFIX + name();
 }
 
-void dbus_device_service::initialize()
+bool dbus_device_service::initialize()
 {
-  qDebug() << "  Initializing" << name();
+	qDebug() << "  Initializing" << name();
+	return true;
 }
 
 void dbus_device_service::start()

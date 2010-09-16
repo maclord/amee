@@ -2,13 +2,23 @@
 
 #include "accelerometer_service.h"
 
-void accelerometer_service::register_instance()
+bool accelerometer_service::initialize()
 {
+	qDebug() << "Initializing" << name();
+	qDebug() << "Checking device type";
+	check_device_type();
+	qDebug() << "Opening device" << device_path;
+	return true;
+}
 
+bool accelerometer_service::check_device_type()
+{
+	
+	return true;
 }
 
 QString accelerometer_service::name()
 {
-  return ACCELEROMETER_SERVICE_NAME+instance_name;
+	return ACCELEROMETER_SERVICE_NAME+instance_name;
 }
 

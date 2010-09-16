@@ -10,10 +10,11 @@ class dbus_devices_manager
 {
 
  private:
-  QList<dbus_device_service *> devices;
+  QList<dbus_device_service *> m_devices;
+  const QSettings &m_settings;
 
  public:
-  dbus_devices_manager();
+  dbus_devices_manager(const QSettings &settings) : m_settings(settings) {}
   void start();
   void initialize();
 };

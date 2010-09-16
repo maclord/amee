@@ -29,11 +29,11 @@ OPENWRT_PATH=$1
 export_variable QMAKE_CXX $OPENWRT_PATH/staging_dir/toolchain-arm_v4t_gcc-4.3.3+cs_uClibc-0.9.30.1_eabi/bin/arm-openwrt-linux-g++
 export_variable QMAKE_CC $OPENWRT_PATH/staging_dir/toolchain-arm_v4t_gcc-4.3.3+cs_uClibc-0.9.30.1_eabi/bin/arm-openwrt-linux-gcc
 export_variable QMAKE_LINK $OPENWRT_PATH/staging_dir/toolchain-arm_v4t_gcc-4.3.3+cs_uClibc-0.9.30.1_eabi/bin/arm-openwrt-linux-gcc
-#export_variable QMAKE_CXXFLAGS \\\"-O2 -pipe -march=armv4t -mtune=arm920t -funit-at-a-time -fhonour-copts -msoft-float -Wall\\\"
-#export_variable QMAKE_CFLAGS \"-O2 -pipe -march=armv4t -mtune=arm920t -funit-at-a-time -fhonour-copts -msoft-float -Wall -Wno-pointer-sign\"
-export_variable QMAKE_DEFINES "-DQT_NO_DEBUG -DQT_DBUS_LIB -DQT_CORE_LIB"
+export_variable QMAKESPEC $OPENWRT_PATH/staging_dir/target-arm_v4t_uClibc-0.9.30.1_eabi/usr/share/mkspecs/linux-openwrt-g++
+export_variable QMAKE_CXXFLAGS "-O2 -pipe -march=armv4t -mtune=arm920t -funit-at-a-time -fhonour-copts -msoft-float -Wall"
+export_variable QMAKE_CFLAGS "-O2 -pipe -march=armv4t -mtune=arm920t -funit-at-a-time -fhonour-copts -msoft-float -Wall -Wno-pointer-sign"
+#export_variable QMAKE_DEFINES "-DQT_NO_DEBUG -DQT_DBUS_LIB -DQT_CORE_LIBaaaaaaaa"
 #export_variable QMAKE_HOST.arch gnah
-#QMAKE_MKSPECS 
 
 echo $VARS
 fi
