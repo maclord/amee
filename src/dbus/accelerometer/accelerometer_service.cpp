@@ -33,7 +33,7 @@ char *memblock = new char [16];
 //    QByteArray array = file.readAll();
 qDebug() << "avant";
 struct input_event ev;
-	file.read(reinterpret_cast<char*>ev, 16);
+//	file.read(reinterpret_cast<char*>ev, 16);
 /**qint32 val = memblock[13];
 val += (memblock[14] << 8);
 val += (memblock[15] << 16);
