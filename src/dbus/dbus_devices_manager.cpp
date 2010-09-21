@@ -25,9 +25,18 @@ void dbus_devices_manager::initialize()
   if(m_settings.value("dbus.webcam.enable").toBool())
 	m_devices.push_back(new webcam_service());
   if(m_settings.value("dbus.accelerometer1.enable").toBool())
-	m_devices.push_back(new accelerometer_service("1", m_settings.value("dbus.accelerometer1.device").toByteArray()));
+	m_devices.push_back(new accelerometer_service(
+		"1",
+		m_settings.value("dbus.accelerometer1.device").toByteArray(),
+		m_settings.value("dbus.accelerometer1.sys.file").toByteArray(),
+		m_settings.value("dbus.accelerometer1.sys.name").toByteArray()
+	));
   if(m_settings.value("dbus.accelerometer2.enable").toBool())
-	m_devices.push_back(new accelerometer_service("2", m_settings.value("dbus.accelerometer2.device").toByteArray()));
+	m_devices.push_back(new accelerometer_service(
+		"2",
+		m_settings.value("dbus.accelerometer2.device").toByteArray(),
+                m_settings.value("dbus.accelerometer2.sys.file").toByteArray(),
+                m_settings.value("dbus.accelerometer2.sys.name").toByteArray()));
   if(m_settings.value("dbus.gps.enable").toBool())
 	m_devices.push_back(new gps_service());
 

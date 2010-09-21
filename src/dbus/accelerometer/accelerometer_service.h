@@ -9,12 +9,15 @@ class accelerometer_service: public dbus_device_service
 {
 
  private:
-  QString instance_name;
-  QString device_path;
+  QString m_instance_name;
+  QString m_device_path;
+  QString m_sys_file;
+  QString m_sys_name;
   bool check_device_type();
 
  public:
-  accelerometer_service(const QString &_instance_name, const QString &_device_path) : instance_name(_instance_name), device_path(_device_path) {};
+  accelerometer_service(const QString &instance_name, const QString &device_path, const QString &sys_file, const QString &sys_name) : 
+	m_instance_name(instance_name), m_device_path(device_path), m_sys_file(sys_file), m_sys_name(sys_name) {};
   QString name();
   bool initialize();
 };
